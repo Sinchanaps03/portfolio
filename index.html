@@ -1,299 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sinchana P S - Portfolio</title>
-  <style>
-    :root {
-      --vintage-purple: #9f3fc5;
-      --vintage-purple-light: #8c56a1;
-      --vintage-purple-dark: #54405c;
-      --vintage-white: #f8f6f0;
-      --vintage-accent: #d2b4de;
-      --black: #181818;
-      --text-main: #181818;
-      --text-light: #fff;
-      --highlight: #fff;
-    }
-    body {
-      font-family: 'Georgia', 'Times New Roman', serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(120deg, var(--vintage-white) 0%, #fff 100%);
-      color: var(--text-main);
-      min-height: 100vh;
-    }
-    header {
-      text-align: center;
-      background: linear-gradient(120deg, var(--vintage-purple-dark) 60%, var(--vintage-purple-light) 100%);
-      color: var(--text-light);
-      padding: 2.5rem 1.5rem 2rem 1.5rem;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      box-shadow: 0 4px 24px #6c348340;
-      letter-spacing: 0.03em;
-    }
-    h1 {
-      margin: 0.2em 0 0.1em 0;
-      font-size: 2.8em;
-      font-family: 'Georgia', serif;
-      letter-spacing: 0.08em;
-      text-shadow: 2px 2px 8px #512e5f33;
-    }
-    h2 {
-      color: var(--vintage-purple-dark);
-      margin-top: 1.5em;
-      font-size: 2em;
-      border-left: 6px solid var(--vintage-purple);
-      padding-left: 0.5em;
-      font-family: 'Georgia', serif;
-      background: linear-gradient(90deg, var(--vintage-accent) 0%, transparent 100%);
-      border-radius: 0 12px 12px 0;
-      margin-bottom: 1em;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem 1.5rem;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 2px 16px #6c348320;
-      border: 2.5px solid var(--vintage-purple-dark);
-    }
-    .skills, .education, .projects, .achievements, .contact {
-      margin-top: 2em;
-    }
-    .skills-list, .edu-list, .proj-list, .achieve-list, .contact-list {
-      list-style: none;
-      padding: 0;
-    }
-    .skills-list li, .edu-list li, .proj-list li, .achieve-list li, .contact-list li {
-      margin-bottom: 1.2em;
-      font-size: 1.08em;
-    }
-    .badge {
-      display: inline-block;
-      background: var(--vintage-purple-light);
-      color: var(--black);
-      border-radius: 8px;
-      padding: 0.25em 0.9em;
-      margin: 0.2em 0.2em 0.2em 0;
-      font-size: 1em;
-      font-family: 'Georgia', serif;
-      box-shadow: 0 1px 4px #6c348320;
-      border: 1.5px solid var(--vintage-purple-dark);
-      font-weight: bold;
-      letter-spacing: 0.03em;
-      text-shadow: 1px 1px 2px #fff8;
-    }
-    .contact-link {
-      color: var(--vintage-purple-dark);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.2s;
-    }
-    .contact-link:hover {
-      color: var(--black);
-      text-decoration: underline;
-    }
-    section ul {
-      margin-top: 0.5em;
-    }
-    section li strong {
-      color: var(--vintage-purple-light-purple);
-      font-family: 'Georgia', serif;
-    }
-    @media (max-width: 600px) {
-      header, section {
-        padding: 1em;
-      }
-      h1 {
-        font-size: 2em;
-      }
-      h2 {
-        font-size: 1.3em;
-      }
-      section {
-        margin: 1em 0.2em;
-      }
-    }
-    .glow-btn {
-      display: inline-block;
-      padding: 0.85em 2.2em;
-      font-size: 1.15em;
-      font-family: 'Georgia', serif;
-      font-weight: bold;
-      color: var(--text-light);
-      background: linear-gradient(90deg, var(--vintage-purple) 0%, var(--vintage-purple-light) 100%);
-      background-size: 200% 200%;
-      border: none;
-      border-radius: 32px;
-      box-shadow: 0 0 18px 4px var(--vintage-purple-light), 0 2px 8px #0002, 0 0 0 0 #fff0;
-      text-shadow: 0 2px 8px #512e5f88;
-      cursor: pointer;
-      text-decoration: none;
-      transition: box-shadow 0.5s, background 0.5s, color 0.5s, filter 0.5s;
-      outline: none;
-      margin-top: 0.5em;
-      filter: brightness(1) drop-shadow(0 0 8px var(--vintage-purple-light));
-      animation: animated-gradient 4s ease-in-out infinite;
-      position: relative;
-      overflow: hidden;
-    }
-    .glow-btn::before {
-      content: '';
-      position: absolute;
-      top: -30%;
-      left: -30%;
-      width: 160%;
-      height: 160%;
-      background: radial-gradient(circle, var(--vintage-purple-light) 0%, transparent 80%);
-      opacity: 0.3;
-      z-index: 0;
-      pointer-events: none;
-      transition: opacity 0.5s;
-      animation: glow-pulse 2.5s infinite alternate;
-    }
-    .glow-btn:hover, .glow-btn:focus {
-      background: linear-gradient(90deg, var(--vintage-purple-dark) 0%, var(--vintage-purple) 100%);
-      color: #fff;
-      box-shadow: 0 0 32px 12px var(--vintage-purple-light), 0 2px 16px #0003, 0 0 0 0 #fff0;
-      filter: brightness(1.1) drop-shadow(0 0 16px var(--vintage-purple-light));
-      text-decoration: none;
-    }
-    /* Formal button: white background, purple text, no glow/highlight */
-    .formal-btn {
-      display: inline-block;
-      padding: 0.65em 1.2em;
-      font-size: 1em;
-      font-family: 'Georgia', serif;
-      font-weight: 600;
-      color: var(--vintage-purple-dark);
-      background: #ffffff;
-      border: 2px solid var(--vintage-purple);
-      border-radius: 10px;
-      box-shadow: none;
-      text-decoration: none;
-      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-      animation: none !important;
-      filter: none !important;
-      text-shadow: none !important;
-    }
-    .formal-btn:hover, .formal-btn:focus {
-      background: #ffffff;
-      color: var(--vintage-purple);
-      border-color: var(--vintage-purple-dark);
-      box-shadow: none;
-      transform: none;
-    }
-    .glow-btn:active {
-      filter: brightness(0.95);
-    }
-    @keyframes animated-gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    @keyframes glow-pulse {
-      0% { opacity: 0.3; }
-      100% { opacity: 0.6; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinchana P S - Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --purple: #7b2cbf;
+    --purple-light: #c77dff;
+    --purple-dark: #5a189a;
+    --white: #ffffff;
+    --bg: #fdfbff;
+    --text-dark: #1e1e1e;
+    --text-light: #555;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--bg), #f7f2fb);
+    color: var(--text-dark);
+  }
+
+  header {
+    text-align: center;
+    background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+    color: var(--white);
+    padding: 3rem 1.5rem;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 8px 24px rgba(123, 44, 191, 0.3);
+    animation: fadeInDown 1s ease;
+    position: relative;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+
+  header p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  /* View My Work Button */
+  .view-work-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, var(--purple), var(--purple-light));
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(123, 44, 191, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .view-work-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgba(123, 44, 191, 0.6);
+  }
+
+  section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 24px rgba(123, 44, 191, 0.15);
+    backdrop-filter: blur(12px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--purple-dark);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: var(--purple);
+    bottom: -8px;
+    left: 0;
+    border-radius: 2px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--text-light);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  li:hover {
+    transform: translateX(5px);
+    color: var(--purple-dark);
+  }
+
+  strong {
+    color: var(--purple-dark);
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--purple-light);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 0.25em 0.9em;
+    margin: 0.2em;
+    font-size: 0.9em;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.25);
+  }
+
+  .contact-link {
+    color: var(--purple-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .contact-link:hover {
+    color: var(--purple);
+    text-decoration: underline;
+  }
+
+  @keyframes fadeInDown { from {opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
+  @keyframes fadeInUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
+
+  @media (max-width:600px){
+    header h1{font-size:2rem;}
+    h2{font-size:1.5rem;}
+    section{padding:1.2rem;}
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>SINCHANA P S</h1>
-    <p>Computer Science Engineering Student &bull; MERN Stack Developer</p>
-    <p>Passionate about creating innovative web solutions using modern technologies.<br>
-    Currently pursuing Computer Science Engineering with a focus on practical applications and leadership.</p>
-    <p>
-      Mangalore, Karnataka
-    </p>
-   
-  </header>
 
-  <section class="skills">
-    <h2>Technical Skills</h2>
-    <ul class="skills-list" style="margin-top: 1.5em; font-size: 1.13em;">
-      <li><strong>Programming Language:</strong> JavaScript</li>
-      <li><strong>Framework:</strong> MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
-      <li><strong>Database:</strong> MySQL</li>
-    </ul>
-  </section>
+<header>
+  <h1>SINCHANA P S</h1>
+  <p>Computer Science Engineering Student &bull; MERN Stack Developer</p>
+  <p>Passionate about creating innovative web solutions using modern technologies.<br>Currently pursuing Computer Science Engineering with a focus on practical applications and leadership.</p>
+  <p>Mangalore, Karnataka</p>
 
-  <section class="education">
-    <h2>Education</h2>
-    <ul class="edu-list">
-      <li><strong>Computer Science Engineering</strong><br>
-        SDIT, Mangalore<br>
-        B.E. (In Progress), 2026<br>
-        CGPA: 8.81(Till 6th sem)
-      </li>
-      <li><strong>Pre-University Course (PU)</strong><br>
-        St. Michael's College, Madikeri, Kodagu<br>
-        Higher Secondary (Completed), 2022<br>
-        87%
-      </li>
-      <li><strong>Matriculation</strong><br>
-        S.R.R School, Kodagu<br>
-        Secondary Education (Completed), 2020<br>
-        91.04%
-      </li>
-    </ul>
-  </section>
+  <!-- View My Work Button -->
+  <a href="https://github.com/Sinchanaps03" target="_blank" class="view-work-btn">View My Work</a>
+</header>
 
-  <section class="projects">
-    <h2>Project</h2>
-    <ul class="proj-list">
-      <li><strong>URL Shortener Application</strong><br>
-        <span class="badge" style="background: var(--vintage-white); color: var(--vintage-purple-dark); border: 1.5px solid var(--vintage-purple-light); font-weight: normal;">August 2025</span><br>
-  Developed a MERN stack-based URL shortener application with responsive UI and RESTful API integration, enabling users to generate and manage short, shareable links efficiently.<br>
-        <span class="badge">React.js</span> <span class="badge">Node.js</span> <span class="badge">Express.js</span> <span class="badge">MongoDB</span> <span class="badge">RESTful API</span><br>
-                                                                                        <a class="contact-link formal-btn" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">LIVE PROJECT DEMO(Tip: If the short URL shows a server error, please log out and log in again.)</a>
-      </li>
-    </ul>
-  </section>
+<section class="skills">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li><strong>Programming Language:</strong> JavaScript</li>
+    <li><strong>Framework:</strong> MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
+    <li><strong>Database:</strong> MySQL</li>
+  </ul>
+</section>
 
-  <section class="achievements">
-    <h2>Leadership & Achievements</h2>
-    <ul class="achieve-list">
-      <li><strong>Vice Chair Person</strong> (IEEE SDIT Student Branch)<br>
-        May 2025 - Present, Mangalore<br>
-        Coordinate and lead technical workshops to enhance student skills, fostering hands-on learning and encouraging innovation. Actively engaged in collaborative activities to bridge gap between academic concepts and real-world applications in SDIT.
-      </li>
-      <li><strong>Postman API Fundamentals Student Expert</strong> (Postman)<br>
-        Dec 2023<br>
-        Certified for practical knowledge of RESTful API design, testing and collaboration workflows.
-      </li>
-      <li><strong>Grand Marshal IT Manager Finalist</strong> (YENEPOYA Institute)<br>
-        Apr 2025, Mangalore<br>
-        Finalist in the Grand Marshal IT Manager event, recognized for excellence in technical problem-solving, aptitude, product management, stress interview rounds and teamwork.
-      </li>
-      <li><strong>Technical Competition Winner</strong> (Shree Devi Institute of Technology)<br>
-        May 2025, Mangalore<br>
-        Winner of Mind Matrix Sankalp Intra-College Technical Competition, showcasing technical skills and teamwork.
-      </li>
-      <li><strong>MVP by Soft Skill Trainers</strong> (CSE, SDIT)<br>
-        Aug 2025<br>
-        Recognized as the Most Valuable Person in Computer Science by soft skill trainers for excellence in teamwork, leadership and public speaking.
-      </li>
-    </ul>
-  </section>
+<section class="education">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Computer Science Engineering</strong><br>SDIT, Mangalore — B.E. (In Progress), 2026<br>CGPA: 8.81 (Till 6th sem)</li>
+    <li><strong>Pre-University Course (PU)</strong><br>St. Michael's College, Madikeri — 2022 — 87%</li>
+    <li><strong>Matriculation</strong><br>S.R.R School, Kodagu — 2020 — 91.04%</li>
+  </ul>
+</section>
 
-  <section class="contact">
-    <h2>Get In Touch</h2>
-    <ul class="contact-list">
-      <li><strong>Email:</strong> <a class="contact-link" href="mailto:Sinchanaps03@gmail.com">Sinchanaps03@gmail.com</a></li>
-      <li><strong>Phone:</strong> <a class="contact-link" href="tel:+917483081046">(+91) 7483081046</a></li>
-      <li><strong>LinkedIn:</strong> <a class="contact-link" href="https://linkedin.com/in/sinchana-p-s-41a78a261" target="_blank">linkedin.com/in/sinchana-p-s-41a78a261</a></li>
-      <li><strong>GitHub:</strong> <a class="contact-link" href="https://github.com/Sinchanaps03" target="_blank">github.com/Sinchanaps03</a></li>
-      <li><strong>Location:</strong> Mangalore, Karnataka</li>
-    </ul>
-    <h3>Let's Collaborate</h3>
-    <ul class="contact-list">
-      <li>Open to internships and collaborations in MERN stack, web and AI projects, while always eager to discuss technology, share knowledge and learn from others.</li>
-    </ul>
-  </section>
+<section class="projects">
+  <h2>Project</h2>
+  <ul>
+    <li>
+      <strong>URL Shortener Application</strong> <span class="badge">August 2025</span><br>
+      MERN stack-based URL shortener with responsive UI & RESTful API integration.<br>
+      <span class="badge">React.js</span> <span class="badge">Node.js</span> <span class="badge">Express.js</span> <span class="badge">MongoDB</span><br>
+      <a class="contact-link" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">
+        LIVE PROJECT DEMO (Tip: If the short URL shows a server error, please log out and log in again.)
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section class="achievements">
+  <h2>Leadership & Achievements</h2>
+  <ul>
+    <li><strong>Vice Chair Person</strong> (IEEE SDIT Student Branch) — May 2025</li>
+    <li><strong>Postman API Fundamentals Student Expert</strong> — Dec 2023</li>
+    <li><strong>Grand Marshal IT Manager Finalist</strong> — Apr 2025</li>
+    <li><strong>Mind Matrix Technical Competition Winner</strong> — May 2025</li>
+    <li><strong>MVP</strong>, Soft Skill Trainers — Aug 2025</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Get In Touch</h2>
+  <ul>
+    <li><strong>Email:</strong> <a class="contact-link" href="mailto:Sinchanaps03@gmail.com">Sinchanaps03@gmail.com</a></li>
+    <li><strong>Phone:</strong> <a class="contact-link" href="tel:+917483081046">(+91) 7483081046</a></li>
+    <li><strong>LinkedIn:</strong> <a class="contact-link" href="https://linkedin.com/in/sinchana-p-s-41a78a261" target="_blank">linkedin.com/in/sinchana-p-s-41a78a261</a></li>
+    <li><strong>GitHub:</strong> <a class="contact-link" href="https://github.com/Sinchanaps03" target="_blank">github.com/Sinchanaps03</a></li>
+    <li><strong>Location:</strong> Mangalore, Karnataka</li>
+  </ul>
+  <h2>Let's Collaborate</h2>
+  <p>Open to internships and collaborations in MERN stack, web and AI projects, while always eager to discuss technology, share knowledge and learn from others.</p>
+</section>
+
 </body>
 </html>
