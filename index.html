@@ -53,7 +53,6 @@
     opacity: 0.9;
   }
 
-  /* View My Work Button */
   .view-work-btn {
     display: inline-block;
     margin-top: 1.5rem;
@@ -81,7 +80,7 @@
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0 8px 24px rgba(123, 44, 191, 0.15);
     backdrop-filter: blur(12px);
-    animation: fadeInUp 1s ease forwards;
+    animation: floatUp 4s ease-in-out infinite alternate, fadeInUp 1s ease forwards;
   }
 
   h2 {
@@ -110,11 +109,13 @@
   }
 
   li {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-size: 1.05rem;
     line-height: 1.5;
     color: var(--text-light);
     transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+    padding-right: 120px;
   }
 
   li:hover {
@@ -127,15 +128,15 @@
   }
 
   .badge {
-    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
     background: var(--purple-light);
-    color: var(--white);
-    border-radius: 8px;
-    padding: 0.25em 0.9em;
-    margin: 0.2em;
-    font-size: 0.9em;
+    color: white;
+    padding: 0.2em 0.6em;
+    border-radius: 6px;
+    font-size: 0.85em;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.25);
   }
 
   .contact-link {
@@ -152,11 +153,14 @@
 
   @keyframes fadeInDown { from {opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
   @keyframes fadeInUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
+  @keyframes floatUp { from {transform: translateY(0);} to {transform: translateY(-10px);} }
 
   @media (max-width:600px){
     header h1{font-size:2rem;}
     h2{font-size:1.5rem;}
     section{padding:1.2rem;}
+    li{padding-right: 0; margin-bottom: 1.5rem;}
+    .badge{position: static; display: inline-block; margin-left: 0.5rem;}
   }
 </style>
 </head>
@@ -168,7 +172,6 @@
   <p>Passionate about creating innovative web solutions using modern technologies.<br>Currently pursuing Computer Science Engineering with a focus on practical applications and leadership.</p>
   <p>Mangalore, Karnataka</p>
 
-  <!-- View My Work Button -->
   <a href="https://github.com/Sinchanaps03" target="_blank" class="view-work-btn">View My Work</a>
 </header>
 
@@ -184,22 +187,26 @@
 <section class="education">
   <h2>Education</h2>
   <ul>
-    <li><strong>Computer Science Engineering</strong><br>SDIT, Mangalore — B.E. (In Progress), 2026<br>CGPA: 8.81 (Till 6th sem)</li>
+    <li><strong>Computer Science Engineering</strong><br>SDIT, Mangalore — B.E, 2026<br>CGPA: 8.81 (Till 6th sem)</li>
     <li><strong>Pre-University Course (PU)</strong><br>St. Michael's College, Madikeri — 2022 — 87%</li>
     <li><strong>Matriculation</strong><br>S.R.R School, Kodagu — 2020 — 91.04%</li>
   </ul>
 </section>
 
 <section class="projects">
-  <h2>Project</h2>
+  <h2>Projects</h2>
   <ul>
     <li>
-      <strong>URL Shortener Application</strong> <span class="badge">August 2025</span><br>
-      MERN stack-based URL shortener with responsive UI & RESTful API integration.<br>
-      <span class="badge">React.js</span> <span class="badge">Node.js</span> <span class="badge">Express.js</span> <span class="badge">MongoDB</span><br>
-      <a class="contact-link" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">
-        LIVE PROJECT DEMO (Tip: If the short URL shows a server error, please log out and log in again.)
-      </a>
+      <strong>Affirmation App</strong>
+      <span class="badge">September 2025</span><br>
+      A full-stack MERN application delivering daily positive affirmations. Users can browse, save, and share motivational quotes with personalized favorites.<br>
+      <a class="contact-link" href="https://affirmation-bay.vercel.app/" target="_blank">Browse my project here</a>
+    </li>
+    <li>
+      <strong>URL Shortener Application</strong>
+      <span class="badge">August 2025</span><br>
+      A MERN stack application that creates short URLs, tracks clicks, and provides a responsive interface for managing links.<br>
+      <a class="contact-link" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Browse my project here (Tip: If the short URL shows server error, please logout & login again)</a>
     </li>
   </ul>
 </section>
