@@ -6,9 +6,9 @@
   <title>Sinchana P S - Portfolio</title>
   <style>
     :root {
-      --vintage-purple: #6c3483;
-      --vintage-purple-light: #a569bd;
-      --vintage-purple-dark: #512e5f;
+      --vintage-purple: #9f3fc5;
+      --vintage-purple-light: #8c56a1;
+      --vintage-purple-dark: #54405c;
       --vintage-white: #f8f6f0;
       --vintage-accent: #d2b4de;
       --black: #181818;
@@ -101,7 +101,7 @@
       margin-top: 0.5em;
     }
     section li strong {
-      color: var(--vintage-purple);
+      color: var(--vintage-purple-light-purple);
       font-family: 'Georgia', serif;
     }
     @media (max-width: 600px) {
@@ -162,6 +162,31 @@
       filter: brightness(1.1) drop-shadow(0 0 16px var(--vintage-purple-light));
       text-decoration: none;
     }
+    /* Formal button: white background, purple text, no glow/highlight */
+    .formal-btn {
+      display: inline-block;
+      padding: 0.65em 1.2em;
+      font-size: 1em;
+      font-family: 'Georgia', serif;
+      font-weight: 600;
+      color: var(--vintage-purple-dark);
+      background: #ffffff;
+      border: 2px solid var(--vintage-purple);
+      border-radius: 10px;
+      box-shadow: none;
+      text-decoration: none;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      animation: none !important;
+      filter: none !important;
+      text-shadow: none !important;
+    }
+    .formal-btn:hover, .formal-btn:focus {
+      background: #ffffff;
+      color: var(--vintage-purple);
+      border-color: var(--vintage-purple-dark);
+      box-shadow: none;
+      transform: none;
+    }
     .glow-btn:active {
       filter: brightness(0.95);
     }
@@ -183,14 +208,9 @@
     <p>Passionate about creating innovative web solutions using modern technologies.<br>
     Currently pursuing Computer Science Engineering with a focus on practical applications and leadership.</p>
     <p>
-      <a class="contact-link" href="mailto:Sinchanaps03@gmail.com">Sinchanaps03@gmail.com</a> &bull;
-      <a class="contact-link" href="tel:+917483081046">(+91) 7483081046</a> &bull;
       Mangalore, Karnataka
     </p>
-    <p>
-      <a class="contact-link" href="https://linkedin.com/in/sinchana-p-s-41a78a261" target="_blank">LinkedIn</a> &bull;
-      <a class="contact-link" href="https://github.com/Sinchanaps03" target="_blank">GitHub</a>
-    </p>
+   
   </header>
 
   <section class="skills">
@@ -208,7 +228,7 @@
       <li><strong>Computer Science Engineering</strong><br>
         SDIT, Mangalore<br>
         B.E. (In Progress), 2026<br>
-        CGPA: 8.8
+        CGPA: 8.81(Till 6th sem)
       </li>
       <li><strong>Pre-University Course (PU)</strong><br>
         St. Michael's College, Madikeri, Kodagu<br>
@@ -224,13 +244,13 @@
   </section>
 
   <section class="projects">
-    <h2>Projects</h2>
+    <h2>Project</h2>
     <ul class="proj-list">
       <li><strong>URL Shortener Application</strong><br>
         <span class="badge" style="background: var(--vintage-white); color: var(--vintage-purple-dark); border: 1.5px solid var(--vintage-purple-light); font-weight: normal;">August 2025</span><br>
-        Developed a MERN stack-based URL shortener application with responsive UI and RESTful API integration, enabling users to generate and manage short, shareable links efficiently.<br>
+  Developed a MERN stack-based URL shortener application with responsive UI and RESTful API integration, enabling users to generate and manage short, shareable links efficiently.<br>
         <span class="badge">React.js</span> <span class="badge">Node.js</span> <span class="badge">Express.js</span> <span class="badge">MongoDB</span> <span class="badge">RESTful API</span><br>
-        <a class="contact-link" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Live Demo</a>
+                                                                                        <a class="contact-link formal-btn" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">LIVE PROJECT DEMO(Tip: If the short URL shows a server error, please log out and log in again.)</a>
       </li>
     </ul>
   </section>
@@ -272,10 +292,7 @@
     </ul>
     <h3>Let's Collaborate</h3>
     <ul class="contact-list">
-      <li>Open to internship opportunities, project collaborations, and technical discussions</li>
-      <li>Seeking internships in MERN stack development and innovative tech projects</li>
-      <li>Interested in working on innovative web and AI projects with fellow developers</li>
-      <li>Always happy to discuss technology, share knowledge, and learn from others</li>
+      <li>Open to internships and collaborations in MERN stack, web and AI projects, while always eager to discuss technology, share knowledge and learn from others.</li>
     </ul>
   </section>
 </body>
