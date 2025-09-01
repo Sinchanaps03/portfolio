@@ -162,6 +162,31 @@
       filter: brightness(1.1) drop-shadow(0 0 16px var(--vintage-purple-light));
       text-decoration: none;
     }
+    /* Formal button: white background, purple text, no glow/highlight */
+    .formal-btn {
+      display: inline-block;
+      padding: 0.65em 1.2em;
+      font-size: 1em;
+      font-family: 'Georgia', serif;
+      font-weight: 600;
+      color: var(--vintage-purple-dark);
+      background: #ffffff;
+      border: 2px solid var(--vintage-purple);
+      border-radius: 10px;
+      box-shadow: none;
+      text-decoration: none;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      animation: none !important;
+      filter: none !important;
+      text-shadow: none !important;
+    }
+    .formal-btn:hover, .formal-btn:focus {
+      background: #ffffff;
+      color: var(--vintage-purple);
+      border-color: var(--vintage-purple-dark);
+      box-shadow: none;
+      transform: none;
+    }
     .glow-btn:active {
       filter: brightness(0.95);
     }
@@ -223,10 +248,9 @@
     <ul class="proj-list">
       <li><strong>URL Shortener Application</strong><br>
         <span class="badge" style="background: var(--vintage-white); color: var(--vintage-purple-dark); border: 1.5px solid var(--vintage-purple-light); font-weight: normal;">August 2025</span><br>
-        Developed a MERN stack-based URL shortener application with responsive UI and RESTful API integration, enabling users to generate and manage short, shareable links efficiently.<br>
+  Developed a MERN stack-based URL shortener application with responsive UI and RESTful API integration, enabling users to generate and manage short, shareable links efficiently.<br>
         <span class="badge">React.js</span> <span class="badge">Node.js</span> <span class="badge">Express.js</span> <span class="badge">MongoDB</span> <span class="badge">RESTful API</span><br>
-        <a class="contact-link" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Live project demo
-        </a>
+                                                                                        <a class="contact-link formal-btn" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">LIVE PROJECT DEMO(Tip: If the short URL shows a server error, please log out and log in again.)</a>
       </li>
     </ul>
   </section>
