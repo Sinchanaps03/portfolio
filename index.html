@@ -151,6 +151,38 @@
     text-decoration: underline;
   }
 
+  /* Glow Card Styles for Skills */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    animation: fadeInUp 1s ease;
+  }
+
+  .skill-card {
+    flex: 1 1 250px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(123, 44, 191, 0.2);
+    padding: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid var(--purple);
+  }
+
+  .skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(123, 44, 191, 0.4);
+  }
+
+  .skill-card strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--purple-dark);
+  }
+
   @keyframes fadeInDown { from {opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
   @keyframes fadeInUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
   @keyframes floatUp { from {transform: translateY(0);} to {transform: translateY(-10px);} }
@@ -161,6 +193,7 @@
     section{padding:1.2rem;}
     li{padding-right: 0; margin-bottom: 1.5rem;}
     .badge{position: static; display: inline-block; margin-left: 0.5rem;}
+    .skills-container { flex-direction: column; }
   }
 </style>
 </head>
@@ -177,11 +210,18 @@
 
 <section class="skills">
   <h2>Technical Skills</h2>
-  <ul>
-    <li><strong>Programming Language:</strong> JavaScript</li>
-    <li><strong>Framework:</strong> MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
-    <li><strong>Database:</strong> MySQL</li>
-  </ul>
+  <div class="skills-container">
+    <div class="skill-card">
+      <strong>Javascript</strong>
+    </div>
+    <div class="skill-card">
+      <strong>MySQL</strong>
+     
+    </div>
+    <div class="skill-card">
+      <strong> MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>
+    </div>
+  </div>
 </section>
 
 <section class="education">
@@ -197,7 +237,7 @@
   <h2>Projects</h2>
   <ul>
     <li>
-      <strong>Affirmation App</strong>
+      <strong>Affirmation </strong>
       <span class="badge">September 2025</span><br>
       A full-stack MERN application delivering daily positive affirmations. Users can browse, save, and share motivational quotes with personalized favorites.<br>
       <a class="contact-link" href="https://affirmation-bay.vercel.app/" target="_blank">Browse my project here</a>
@@ -214,11 +254,24 @@
 <section class="achievements">
   <h2>Leadership & Achievements</h2>
   <ul>
-    <li><strong>Vice Chair Person</strong> (IEEE SDIT Student Branch) — May 2025</li>
-    <li><strong>Postman API Fundamentals Student Expert</strong> — Dec 2023</li>
-    <li><strong>Grand Marshal IT Manager Finalist</strong> — Apr 2025</li>
-    <li><strong>Mind Matrix Technical Competition Winner</strong> — May 2025</li>
-    <li><strong>MVP</strong>, Soft Skill Trainers — Aug 2025</li>
+    <li><strong>Vice Chair Person</strong> (IEEE SDIT Student Branch) — May 2025<br>
+  Coordinate and lead technical workshops to enhance student skills, fostering Hands
+on learning and encouraging and innovation. Actively engaged in collaborative 
+activities to bridge gap between academic concepts and real-world applications in 
+SDIT. </li>
+    <li><strong>Postman API Fundamentals Student Expert</strong> — Dec 2023
+    <br> A certified Postman API Fundamentals Student Expert, demonstrating practical 
+knowledge of RESTful API design, testing and collaboration workflows. </li>
+    <li><strong>Grand Marshal IT Manager Finalist</strong> — Apr 2025
+    <br>A <b>finalist</b> in the Grand Marshal IT Manager event at YENEPOYA Institute, recognized 
+for excellence in technical problem-solving, aptitude, product management, stress 
+interview rounds and team work. </li>
+    <li><strong>Mind Matrix Technical Competition Winner</strong> — May 2025
+    <br>Winner of Mind Matrix Sankalp Intra-College Technical Competition at Shree Devi 
+Institute of Technology, showcasing technical skills and teamwork. </li>
+    <li><strong>Most Valuable Person</strong>, Soft Skill Trainers — Aug 2025
+    <br>Recognized as the <b>MVP</b> in Computer Science by soft skill trainers for 
+excellence in teamwork, leadership and public speaking.</li>
   </ul>
 </section>
 
