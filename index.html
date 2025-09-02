@@ -183,6 +183,26 @@
     color: var(--purple-dark);
   }
 
+  /* Cute project buttons */
+  .project-btn {
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 0.7rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, var(--purple), var(--purple-light));
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(123, 44, 191, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .project-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.6);
+  }
+
   @keyframes fadeInDown { from {opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
   @keyframes fadeInUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
   @keyframes floatUp { from {transform: translateY(0);} to {transform: translateY(-10px);} }
@@ -216,10 +236,9 @@
     </div>
     <div class="skill-card">
       <strong>MySQL</strong>
-     
     </div>
     <div class="skill-card">
-      <strong> MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>
+      <strong>MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>
     </div>
   </div>
 </section>
@@ -237,16 +256,17 @@
   <h2>Projects</h2>
   <ul>
     <li>
-      <strong>Affirmation </strong>
+      <strong>Affirmation Application</strong>
       <span class="badge">September 2025</span><br>
       A full-stack MERN application delivering daily positive affirmations. Users can browse, save, and share motivational quotes with personalized favorites.<br>
-      <a class="contact-link" href="https://affirmation-bay.vercel.app/" target="_blank">Browse my project here</a>
+      <a class="project-btn" href="https://affirmation-bay.vercel.app/" target="_blank">Browse my project here</a>
     </li>
     <li>
       <strong>URL Shortener Application</strong>
       <span class="badge">August 2025</span><br>
       A MERN stack application that creates short URLs, tracks clicks, and provides a responsive interface for managing links.<br>
-      <a class="contact-link" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Browse my project here (Tip: If the short URL shows server error, please logout & login again)</a>
+      <a class="project-btn" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Browse my project here</a>
+      <br><small>(Tip: If the short URL shows server error, please logout & login again)</small>
     </li>
   </ul>
 </section>
