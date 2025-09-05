@@ -1,290 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sinchana P S - Portfolio</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-<style>
-:root {
-  --purple: #7b2cbf;
-  --purple-light: #c77dff;
-  --purple-dark: #5a189a;
-  --white: #ffffff;
-  --bg: #fdfbff;
-  --text-dark: #1e1e1e;
-  --text-light: #555;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, var(--bg), #f7f2fb);
-  color: var(--text-dark);
-}
-header {
-  text-align: center;
-  background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
-  color: var(--white);
-  padding: 3rem 1.5rem;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  box-shadow: 0 8px 24px rgba(123, 44, 191, 0.3);
-  animation: fadeInDown 1s ease;
-  position: relative;
-}
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin: 0;
-  letter-spacing: 2px;
-}
-header p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-.view-work-btn {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(90deg, var(--purple), var(--purple-light));
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 4px 20px rgba(123, 44, 191, 0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.view-work-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 24px rgba(123, 44, 191, 0.6);
-}
-section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 24px rgba(123, 44, 191, 0.15);
-  backdrop-filter: blur(12px);
-  animation: floatUp 4s ease-in-out infinite alternate, fadeInUp 1s ease forwards;
-}
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: var(--purple-dark);
-  margin-bottom: 1rem;
-  position: relative;
-}
-h2::after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 4px;
-  background: var(--purple);
-  bottom: -8px;
-  left: 0;
-  border-radius: 2px;
-}
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-li {
-  margin-bottom: 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: var(--text-light);
-  transition: transform 0.3s ease, color 0.3s ease;
-  position: relative;
-  padding-right: 120px;
-}
-li:hover {
-  transform: translateX(5px);
-  color: var(--purple-dark);
-}
-strong {
-  color: var(--purple-dark);
-}
-.badge {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: var(--purple-light);
-  color: white;
-  padding: 0.2em 0.6em;
-  border-radius: 6px;
-  font-size: 0.85em;
-  font-weight: 600;
-}
-.contact-link {
-  color: var(--purple-dark);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.contact-link:hover {
-  color: var(--purple);
-  text-decoration: underline;
-}
-/* Glow Card Styles for Skills */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-top: 1.5rem;
-  animation: fadeInUp 1s ease;
-}
-.skill-card {
-  flex: 1 1 250px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(123, 44, 191, 0.2);
-  padding: 1.2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 6px solid var(--purple);
-  display: flex;
-  align-items: center;
-}
-.skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(123, 44, 191, 0.4);
-}
-.skill-card strong {
-  display: block;
-  font-size: 1.1rem;
-  margin-left: 8px;
-  color: var(--purple-dark);
-}
-/* Cute project buttons */
-.project-btn {
-  display: inline-block;
-  margin-top: 0.8rem;
-  padding: 0.7rem 1.6rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(90deg, var(--purple), var(--purple-light));
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(123, 44, 191, 0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.project-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(123, 44, 191, 0.6);
-}
-@keyframes fadeInDown { from {opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
-@keyframes fadeInUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
-@keyframes floatUp { from {transform: translateY(0);} to {transform: translateY(-10px);} }
-@media (max-width:600px){
-  header h1{font-size:2rem;}
-  h2{font-size:1.5rem;}
-  section{padding:1.2rem;}
-  li{padding-right: 0; margin-bottom: 1.5rem;}
-  .badge{position: static; display: inline-block; margin-left: 0.5rem;}
-  .skills-container { flex-direction: column; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinchana P S - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<header>
-  <h1>SINCHANA P S</h1>
-  <p>Computer Science Engineering Student &bull; MERN Stack Developer</p>
-  <p>Passionate about creating innovative web solutions using modern technologies.<br>Currently pursuing Computer Science Engineering with a focus on practical applications and leadership.</p>
-  <p>Mangalore, Karnataka</p>
-  <a href="https://github.com/Sinchanaps03" target="_blank" class="view-work-btn">View My Work</a>
+<body class="bg-gradient-to-br from-[#fdfbff] to-[#f7f2fb] text-gray-900 font-sans">
+
+<header class="text-center bg-gradient-to-br from-[#5a189a] to-[#c77dff] text-white p-12 rounded-b-[50px] shadow-lg relative animate-fadeInDown">
+  <h1 class="font-serif text-4xl md:text-5xl tracking-wide">SINCHANA P S</h1>
+  <p class="mt-4 text-lg md:text-xl opacity-90">Computer Science Engineering Student &bull; MERN Stack Developer</p>
+  <p class="mt-2 text-md md:text-lg">Passionate about creating innovative web solutions using modern technologies.<br>Currently pursuing Computer Science Engineering with a focus on practical applications and leadership.</p>
+  <p class="mt-2">Mangalore, Karnataka</p>
+  <a href="https://github.com/Sinchanaps03" target="_blank" class="inline-block mt-6 px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-[#7b2cbf] to-[#c77dff] rounded-full shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg">View My Work</a>
 </header>
 
-<section class="skills">
-  <h2>Technical Skills</h2>
-  <div class="skills-container">
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" style="width:30px;">
-      <strong>JavaScript</strong>
+<!-- Technical Skills -->
+<section class="max-w-4xl mx-auto my-8 p-6 bg-white/80 backdrop-blur-lg rounded-xl shadow-md animate-fadeInUp">
+  <h2 class="font-serif text-2xl text-[#5a189a] mb-4 relative inline-block">Technical Skills</h2>
+  <div class="flex flex-wrap gap-4 justify-between mt-4">
+    <div class="flex items-center bg-white rounded-lg shadow-md border-l-4 border-[#7b2cbf] p-4 flex-1 min-w-[200px] hover:translate-y-[-4px] hover:shadow-lg transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo" class="w-8 h-8">
+      <strong class="ml-2 text-[#5a189a]">HTML</strong>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Logo" style="width:30px;">
-      <strong>MySQL</strong>
+    <div class="flex items-center bg-white rounded-lg shadow-md border-l-4 border-[#7b2cbf] p-4 flex-1 min-w-[200px] hover:translate-y-[-4px] hover:shadow-lg transition">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tailwindcss.svg" alt="Tailwind CSS Logo" class="w-8 h-8">
+      <strong class="ml-2 text-[#5a189a]">Tailwind CSS</strong>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Logo" style="width:30px;">
-      <strong>MongoDB</strong>
+    <div class="flex items-center bg-white rounded-lg shadow-md border-l-4 border-[#7b2cbf] p-4 flex-1 min-w-[200px] hover:translate-y-[-4px] hover:shadow-lg transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="w-8 h-8">
+      <strong class="ml-2 text-[#5a189a]">JavaScript</strong>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js Logo" style="width:30px;">
-      <strong>Express.js</strong>
+    <div class="flex items-center bg-white rounded-lg shadow-md border-l-4 border-[#7b2cbf] p-4 flex-1 min-w-[200px] hover:translate-y-[-4px] hover:shadow-lg transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Logo" class="w-8 h-8">
+      <strong class="ml-2 text-[#5a189a]">MySQL</strong>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js Logo" style="width:30px;">
-      <strong>React.js</strong>
+    <div class="flex items-center bg-white rounded-lg shadow-md border-l-4 border-[#7b2cbf] p-4 flex-1 min-w-[200px] hover:translate-y-[-4px] hover:shadow-lg transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Logo" class="w-8 h-8">
+      <strong class="ml-2 text-[#5a189a]">MongoDB</strong>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Logo" style="width:30px;">
-      <strong>Node.js</strong>
+    <div class="flex items-center bg-white rounded-lg shadow-md border-l-4 border-[#7b2cbf] p-4 flex-1 min-w-[200px] hover:translate-y-[-4px] hover:shadow-lg transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js Logo" class="w-8 h-8">
+      <strong class="ml-2 text-[#5a189a]">Express.js</strong>
+    </div>
+    <div class="flex items-center bg-white rounded-lg shadow-md border-l-4 border-[#7b2cbf] p-4 flex-1 min-w-[200px] hover:translate-y-[-4px] hover:shadow-lg transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js Logo" class="w-8 h-8">
+      <strong class="ml-2 text-[#5a189a]">React.js</strong>
+    </div>
+    <div class="flex items-center bg-white rounded-lg shadow-md border-l-4 border-[#7b2cbf] p-4 flex-1 min-w-[200px] hover:translate-y-[-4px] hover:shadow-lg transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Logo" class="w-8 h-8">
+      <strong class="ml-2 text-[#5a189a]">Node.js</strong>
     </div>
   </div>
 </section>
 
-<section class="education">
-  <h2>Education</h2>
-  <ul>
+<!-- Education -->
+<section class="max-w-4xl mx-auto my-8 p-6 bg-white/80 backdrop-blur-lg rounded-xl shadow-md animate-fadeInUp">
+  <h2 class="font-serif text-2xl text-[#5a189a] mb-4">Education</h2>
+  <ul class="space-y-4 text-gray-600">
     <li><strong>Computer Science Engineering</strong><br>SDIT, Mangalore — B.E, 2026<br>CGPA: 8.81 (Till 6th sem)</li>
     <li><strong>Pre-University Course (PU)</strong><br>St. Michael's College, Madikeri — 2022 — 87%</li>
     <li><strong>Matriculation</strong><br>S.R.R School, Kodagu — 2020 — 91.04%</li>
   </ul>
 </section>
 
-<section class="projects">
-  <h2>Projects</h2>
-  <ul>
+<!-- Projects -->
+<section class="max-w-4xl mx-auto my-8 p-6 bg-white/80 backdrop-blur-lg rounded-xl shadow-md animate-fadeInUp">
+  <h2 class="font-serif text-2xl text-[#5a189a] mb-4">Projects</h2>
+  <ul class="space-y-4 text-gray-600">
     <li>
-      <strong>Affirmation Application</strong> <span class="badge">September 2025</span><br>
+      <strong>Affirmation Application</strong><br>
       A full-stack MERN application delivering daily positive affirmations. Users can browse, save, and share motivational quotes with personalized favorites.<br>
-      <a class="project-btn" href="https://affirmation-bay.vercel.app/" target="_blank">Browse my project here</a>
+      <a class="inline-block mt-2 px-4 py-2 bg-gradient-to-r from-[#7b2cbf] to-[#c77dff] text-white font-semibold rounded-full shadow-md hover:scale-105 transition" href="https://affirmation-bay.vercel.app/" target="_blank">Browse my project here</a>
     </li>
     <li>
-      <strong>URL Shortener Application</strong> <span class="badge">August 2025</span><br>
+      <strong>URL Shortener Application</strong><br>
       A MERN stack application that creates short URLs, tracks clicks, and provides a responsive interface for managing links.<br>
-      <a class="project-btn" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Browse my project here</a><br>
+      <a class="inline-block mt-2 px-4 py-2 bg-gradient-to-r from-[#7b2cbf] to-[#c77dff] text-white font-semibold rounded-full shadow-md hover:scale-105 transition" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Browse my project here</a><br>
       <small>(Tip: If the short URL shows server error, please logout & login again)</small>
     </li>
   </ul>
 </section>
 
-<section class="achievements">
-  <h2>Leadership & Achievements</h2>
-  <ul>
-    <li><strong>Vice Chair Person</strong> (IEEE SDIT Student Branch) — May 2025<br>
-    Coordinate and lead technical workshops to enhance student skills, fostering Hands on learning and encouraging and innovation. Actively engaged in collaborative activities to bridge gap between academic concepts and real-world applications in SDIT.</li>
-    <li><strong>Postman API Fundamentals Student Expert</strong> — Dec 2023<br>
-    A certified Postman API Fundamentals Student Expert, demonstrating practical knowledge of RESTful API design, testing and collaboration workflows.</li>
-    <li><strong>Grand Marshal IT Manager Finalist</strong> — Apr 2025<br>
-    A <b>finalist</b> in the Grand Marshal IT Manager event at YENEPOYA Institute, recognized for excellence in technical problem-solving, aptitude, product management, stress interview rounds and team work.</li>
-    <li><strong>Mind Matrix Technical Competition Winner</strong> — May 2025<br>
-    Winner of Mind Matrix Sankalp Intra-College Technical Competition at Shree Devi Institute of Technology, showcasing technical skills and teamwork.</li>
-    <li><strong>Most Valuable Person</strong>, Soft Skill Trainers — Aug 2025<br>
-    Recognized as the <b>MVP</b> in Computer Science by soft skill trainers for excellence in teamwork, leadership and public speaking.</li>
+<!-- Achievements -->
+<section class="max-w-4xl mx-auto my-8 p-6 bg-white/80 backdrop-blur-lg rounded-xl shadow-md animate-fadeInUp">
+  <h2 class="font-serif text-2xl text-[#5a189a] mb-4">Leadership & Achievements</h2>
+  <ul class="space-y-4 text-gray-600">
+    <li><strong>Vice Chair Person</strong> (IEEE SDIT Student Branch) — May 2025<br>Coordinate and lead technical workshops to enhance student skills, fostering Hands on learning and encouraging innovation.</li>
+    <li><strong>Postman API Fundamentals Student Expert</strong> — Dec 2023<br>A certified Postman API Fundamentals Student Expert, demonstrating practical knowledge of RESTful API design, testing and collaboration workflows.</li>
+    <li><strong>Grand Marshal IT Manager Finalist</strong> — Apr 2025<br>A <b>finalist</b> in the Grand Marshal IT Manager event at YENEPOYA Institute, recognized for excellence in technical problem-solving, aptitude, product management, stress interview rounds and teamwork.</li>
+    <li><strong>Mind Matrix Technical Competition Winner</strong> — May 2025<br>Winner of Mind Matrix Sankalp Intra-College Technical Competition at Shree Devi Institute of Technology, showcasing technical skills and teamwork.</li>
+    <li><strong>Most Valuable Person</strong>, Soft Skill Trainers — Aug 2025<br>Recognized as the <b>MVP</b> in Computer Science by soft skill trainers for excellence in teamwork, leadership and public speaking.</li>
   </ul>
 </section>
 
-<section class="contact">
-  <h2>Get In Touch</h2>
-  <ul>
-    <li><strong>Email:</strong> <a class="contact-link" href="mailto:Sinchanaps03@gmail.com">Sinchanaps03@gmail.com</a></li>
-    <li><strong>Phone:</strong> <a class="contact-link" href="tel:+917483081046">(+91) 7483081046</a></li>
-    <li><strong>LinkedIn:</strong> <a class="contact-link" href="https://linkedin.com/in/sinchana-p-s-41a78a261" target="_blank">linkedin.com/in/sinchana-p-s-41a78a261</a></li>
-    <li><strong>GitHub:</strong> <a class="contact-link" href="https://github.com/Sinchanaps03" target="_blank">github.com/Sinchanaps03</a></li>
+<!-- Contact -->
+<section class="max-w-4xl mx-auto my-8 p-6 bg-white/80 backdrop-blur-lg rounded-xl shadow-md animate-fadeInUp">
+  <h2 class="font-serif text-2xl text-[#5a189a] mb-4">Get In Touch</h2>
+  <ul class="space-y-2 text-gray-600">
+    <li><strong>Email:</strong> <a class="text-[#5a189a] font-semibold hover:text-[#7b2cbf] hover:underline" href="mailto:Sinchanaps03@gmail.com">Sinchanaps03@gmail.com</a></li>
+    <li><strong>Phone:</strong> <a class="text-[#5a189a] font-semibold hover:text-[#7b2cbf] hover:underline" href="tel:+917483081046">(+91) 7483081046</a></li>
+    <li><strong>LinkedIn:</strong> <a class="text-[#5a189a] font-semibold hover:text-[#7b2cbf] hover:underline" href="https://linkedin.com/in/sinchana-p-s-41a78a261" target="_blank">linkedin.com/in/sinchana-p-s-41a78a261</a></li>
+    <li><strong>GitHub:</strong> <a class="text-[#5a189a] font-semibold hover:text-[#7b2cbf] hover:underline" href="https://github.com/Sinchanaps03" target="_blank">github.com/Sinchanaps03</a></li>
     <li><strong>Location:</strong> Mangalore, Karnataka</li>
   </ul>
-  <h2>Let's Collaborate</h2>
+  <h2 class="font-serif text-2xl text-[#5a189a] mt-6 mb-2">Let's Collaborate</h2>
   <p>Open to internships and collaborations in MERN stack, web and AI projects, while always eager to discuss technology, share knowledge and learn from others.</p>
 </section>
+
+<!-- Tailwind Animations -->
+<style>
+@keyframes fadeInDown { from {opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
+@keyframes fadeInUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
+.animate-fadeInDown { animation: fadeInDown 1s ease forwards; }
+.animate-fadeInUp { animation: fadeInUp 1s ease forwards; }
+</style>
+
 </body>
 </html>
