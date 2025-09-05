@@ -25,6 +25,8 @@
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, var(--bg), #f7f2fb);
     color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   header {
@@ -77,7 +79,7 @@
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 8px 24px rgba(123, 44, 191, 0.15);
     backdrop-filter: blur(12px);
     animation: floatUp 4s ease-in-out infinite alternate, fadeInUp 1s ease forwards;
@@ -151,7 +153,7 @@
     text-decoration: underline;
   }
 
-  /* Glow Card Styles for Skills */
+  /* Skills */
   .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -183,7 +185,7 @@
     color: var(--purple-dark);
   }
 
-  /* Cute project buttons */
+  /* Project Buttons */
   .project-btn {
     display: inline-block;
     margin-top: 0.8rem;
@@ -203,17 +205,64 @@
     box-shadow: 0 6px 20px rgba(123, 44, 191, 0.6);
   }
 
+  /* Animations */
   @keyframes fadeInDown { from {opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
   @keyframes fadeInUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
   @keyframes floatUp { from {transform: translateY(0);} to {transform: translateY(-10px);} }
 
-  @media (max-width:600px){
-    header h1{font-size:2rem;}
-    h2{font-size:1.5rem;}
-    section{padding:1.2rem;}
-    li{padding-right: 0; margin-bottom: 1.5rem;}
-    .badge{position: static; display: inline-block; margin-left: 0.5rem;}
-    .skills-container { flex-direction: column; }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      font-size: 15px;
+      line-height: 1.6;
+      padding: 0 8px;
+    }
+
+    header {
+      padding: 2rem 1rem;
+      border-radius: 0 0 30px 30px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    section {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    li {
+      padding-right: 0;
+      margin-bottom: 1.2rem;
+    }
+
+    .badge {
+      position: static;
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+
+    .skills-container {
+      flex-direction: column;
+    }
+
+    .view-work-btn,
+    .project-btn {
+      padding: 0.7rem 1.4rem;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
   }
 </style>
 </head>
@@ -221,7 +270,7 @@
 
 <header>
   <h1>SINCHANA P S</h1>
-  <p>Computer Science Engineering Student &bull; MERN Stack Developer</p>
+  <p>Computer Science Engineering Student • MERN Stack Developer</p>
   <p>Passionate about creating innovative web solutions using modern technologies.<br>Currently pursuing Computer Science Engineering with a focus on practical applications and leadership.</p>
   <p>Mangalore, Karnataka</p>
 
@@ -231,15 +280,9 @@
 <section class="skills">
   <h2>Technical Skills</h2>
   <div class="skills-container">
-    <div class="skill-card">
-      <strong>Javascript</strong>
-    </div>
-    <div class="skill-card">
-      <strong>MySQL</strong>
-    </div>
-    <div class="skill-card">
-      <strong>MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>
-    </div>
+    <div class="skill-card"><strong>Javascript</strong></div>
+    <div class="skill-card"><strong>MySQL</strong></div>
+    <div class="skill-card"><strong>MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong></div>
   </div>
 </section>
 
@@ -275,23 +318,15 @@
   <h2>Leadership & Achievements</h2>
   <ul>
     <li><strong>Vice Chair Person</strong> (IEEE SDIT Student Branch) — May 2025<br>
-  Coordinate and lead technical workshops to enhance student skills, fostering Hands
-on learning and encouraging and innovation. Actively engaged in collaborative 
-activities to bridge gap between academic concepts and real-world applications in 
-SDIT. </li>
-    <li><strong>Postman API Fundamentals Student Expert</strong> — Dec 2023
-    <br> A certified Postman API Fundamentals Student Expert, demonstrating practical 
-knowledge of RESTful API design, testing and collaboration workflows. </li>
-    <li><strong>Grand Marshal IT Manager Finalist</strong> — Apr 2025
-    <br>A <b>finalist</b> in the Grand Marshal IT Manager event at YENEPOYA Institute, recognized 
-for excellence in technical problem-solving, aptitude, product management, stress 
-interview rounds and team work. </li>
-    <li><strong>Mind Matrix Technical Competition Winner</strong> — May 2025
-    <br>Winner of Mind Matrix Sankalp Intra-College Technical Competition at Shree Devi 
-Institute of Technology, showcasing technical skills and teamwork. </li>
-    <li><strong>Most Valuable Person</strong>, Soft Skill Trainers — Aug 2025
-    <br>Recognized as the <b>MVP</b> in Computer Science by soft skill trainers for 
-excellence in teamwork, leadership and public speaking.</li>
+    Coordinate and lead technical workshops to enhance student skills, fostering hands-on learning and innovation.</li>
+    <li><strong>Postman API Fundamentals Student Expert</strong> — Dec 2023<br>
+    Certified in RESTful API design, testing and collaboration workflows.</li>
+    <li><strong>Grand Marshal IT Manager Finalist</strong> — Apr 2025<br>
+    Finalist in the Grand Marshal IT Manager event at YENEPOYA Institute.</li>
+    <li><strong>Mind Matrix Technical Competition Winner</strong> — May 2025<br>
+    Winner of Mind Matrix Sankalp Intra-College Technical Competition at SDIT.</li>
+    <li><strong>Most Valuable Person</strong>, Soft Skill Trainers — Aug 2025<br>
+    Recognized as MVP for excellence in teamwork, leadership and public speaking.</li>
   </ul>
 </section>
 
@@ -305,7 +340,7 @@ excellence in teamwork, leadership and public speaking.</li>
     <li><strong>Location:</strong> Mangalore, Karnataka</li>
   </ul>
   <h2>Let's Collaborate</h2>
-  <p>Open to internships and collaborations in MERN stack, web and AI projects, while always eager to discuss technology, share knowledge and learn from others.</p>
+  <p>Open to internships and collaborations in MERN stack, web and AI projects. Always eager to discuss technology, share knowledge, and learn from others.</p>
 </section>
 
 </body>
