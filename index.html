@@ -169,6 +169,7 @@
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(123, 44, 191, 0.2);
     padding: 1.2rem;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 6px solid var(--purple);
   }
@@ -181,8 +182,14 @@
   .skill-card strong {
     display: block;
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     color: var(--purple-dark);
+  }
+
+  .skill-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.6rem;
   }
 
   /* Project Buttons */
@@ -280,9 +287,18 @@
 <section class="skills">
   <h2>Technical Skills</h2>
   <div class="skills-container">
-    <div class="skill-card"><strong>Javascript</strong></div>
-    <div class="skill-card"><strong>MySQL</strong></div>
-    <div class="skill-card"><strong>MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong></div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="skill-logo">
+      <strong>JavaScript</strong>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Logo" class="skill-logo">
+      <strong>MySQL</strong>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="MERN Stack Logo" class="skill-logo">
+      <strong>MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>
+    </div>
   </div>
 </section>
 
