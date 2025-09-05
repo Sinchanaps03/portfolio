@@ -4,214 +4,287 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sinchana P S - Portfolio</title>
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
 <style>
-  :root {
-    --purple: #7b2cbf;
-    --purple-light: #c77dff;
-    --purple-dark: #5a189a;
-    --white: #ffffff;
-    --bg: #fdfbff;
-    --text-dark: #1e1e1e;
-    --text-light: #555;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, var(--bg), #f7f2fb);
-    color: var(--text-dark);
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  header {
-    text-align: center;
-    background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
-    color: var(--white);
-    padding: 3rem 1.5rem;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    box-shadow: 0 8px 24px rgba(123, 44, 191, 0.3);
-    animation: fadeInDown 1s ease;
-    position: relative;
-  }
-
-  header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin: 0;
-    letter-spacing: 2px;
-  }
-
-  header p {
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    line-height: 1.6;
-    opacity: 0.9;
-  }
-
-  section {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-    animation: fadeInUp 1.2s ease;
-  }
-
-  h2 {
-    font-size: 2rem;
-    color: var(--purple-dark);
-    margin-bottom: 1.5rem;
-    border-left: 6px solid var(--purple);
-    padding-left: 12px;
-  }
-
-  /* Skills Section */
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    justify-content: center;
-  }
-
-  .skill-card {
-    background: var(--white);
-    padding: 1.2rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    text-align: center;
-    width: 130px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 24px rgba(123, 44, 191, 0.2);
-  }
-
-  .skill-logo {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 0.6rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Projects Section */
-  .project-card {
-    background: var(--white);
-    padding: 1.5rem;
-    border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 24px rgba(123, 44, 191, 0.2);
-  }
-
-  .project-date {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--purple-dark);
-    margin-top: 0.5rem;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    body {
-      font-size: 15px;
-    }
-    header h1 {
-      font-size: 2rem;
-    }
-    h2 {
-      font-size: 1.6rem;
-    }
-    .skill-card {
-      width: 100px;
-      padding: 1rem;
-    }
-    .skill-logo {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
-  @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+:root {
+  --purple: #7b2cbf;
+  --purple-light: #c77dff;
+  --purple-dark: #5a189a;
+  --white: #ffffff;
+  --bg: #fdfbff;
+  --text-dark: #1e1e1e;
+  --text-light: #555;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--bg), #f7f2fb);
+  color: var(--text-dark);
+}
+header {
+  text-align: center;
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+  color: var(--white);
+  padding: 3rem 1.5rem;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 8px 24px rgba(123, 44, 191, 0.3);
+  animation: fadeInDown 1s ease;
+  position: relative;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+}
+header p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+.view-work-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, var(--purple), var(--purple-light));
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(123, 44, 191, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.view-work-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(123, 44, 191, 0.6);
+}
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 24px rgba(123, 44, 191, 0.15);
+  backdrop-filter: blur(12px);
+  animation: floatUp 4s ease-in-out infinite alternate, fadeInUp 1s ease forwards;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--purple-dark);
+  margin-bottom: 1rem;
+  position: relative;
+}
+h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: var(--purple);
+  bottom: -8px;
+  left: 0;
+  border-radius: 2px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+li {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--text-light);
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+  padding-right: 120px;
+}
+li:hover {
+  transform: translateX(5px);
+  color: var(--purple-dark);
+}
+strong {
+  color: var(--purple-dark);
+}
+.badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--purple-light);
+  color: white;
+  padding: 0.2em 0.6em;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+.contact-link {
+  color: var(--purple-dark);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.contact-link:hover {
+  color: var(--purple);
+  text-decoration: underline;
+}
+/* Glow Card Styles for Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  animation: fadeInUp 1s ease;
+}
+.skill-card {
+  flex: 1 1 250px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(123, 44, 191, 0.2);
+  padding: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 6px solid var(--purple);
+  display: flex;
+  align-items: center;
+}
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(123, 44, 191, 0.4);
+}
+.skill-card strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-left: 8px;
+  color: var(--purple-dark);
+}
+/* Cute project buttons */
+.project-btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, var(--purple), var(--purple-light));
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(123, 44, 191, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(123, 44, 191, 0.6);
+}
+@keyframes fadeInDown { from {opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
+@keyframes fadeInUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
+@keyframes floatUp { from {transform: translateY(0);} to {transform: translateY(-10px);} }
+@media (max-width:600px){
+  header h1{font-size:2rem;}
+  h2{font-size:1.5rem;}
+  section{padding:1.2rem;}
+  li{padding-right: 0; margin-bottom: 1.5rem;}
+  .badge{position: static; display: inline-block; margin-left: 0.5rem;}
+  .skills-container { flex-direction: column; }
+}
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Sinchana P S</h1>
-  <p>Aspiring Software Engineer | JavaScript | MySQL | MERN Stack</p>
+  <h1>SINCHANA P S</h1>
+  <p>Computer Science Engineering Student &bull; MERN Stack Developer</p>
+  <p>Passionate about creating innovative web solutions using modern technologies.<br>Currently pursuing Computer Science Engineering with a focus on practical applications and leadership.</p>
+  <p>Mangalore, Karnataka</p>
+  <a href="https://github.com/Sinchanaps03" target="_blank" class="view-work-btn">View My Work</a>
 </header>
 
 <section class="skills">
   <h2>Technical Skills</h2>
   <div class="skills-container">
     <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
-           alt="JavaScript Logo" class="skill-logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" style="width:30px;">
       <strong>JavaScript</strong>
     </div>
     <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
-           alt="MySQL Logo" class="skill-logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Logo" style="width:30px;">
       <strong>MySQL</strong>
     </div>
     <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" 
-           alt="MongoDB Logo" class="skill-logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Logo" style="width:30px;">
       <strong>MongoDB</strong>
     </div>
     <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" 
-           alt="Express Logo" class="skill-logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js Logo" style="width:30px;">
       <strong>Express.js</strong>
     </div>
     <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
-           alt="React Logo" class="skill-logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js Logo" style="width:30px;">
       <strong>React.js</strong>
     </div>
     <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" 
-           alt="Node Logo" class="skill-logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Logo" style="width:30px;">
       <strong>Node.js</strong>
     </div>
   </div>
 </section>
 
-<section class="projects">
-  <h2>Projects</h2>
-  <div class="project-card">
-    <h3>AI Document Summarizer</h3>
-    <p>Built an AI-powered application to automatically summarize long documents using NLP and cloud deployment on AWS.</p>
-    <p class="project-date">September 2025</p>
-  </div>
-  <div class="project-card">
-    <h3>E-Waste & C&D Waste Management System</h3>
-    <p>Designed a smart city integration model for effective e-waste and construction waste tracking and recycling.</p>
-    <p class="project-date">August 2025</p>
-  </div>
+<section class="education">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Computer Science Engineering</strong><br>SDIT, Mangalore — B.E, 2026<br>CGPA: 8.81 (Till 6th sem)</li>
+    <li><strong>Pre-University Course (PU)</strong><br>St. Michael's College, Madikeri — 2022 — 87%</li>
+    <li><strong>Matriculation</strong><br>S.R.R School, Kodagu — 2020 — 91.04%</li>
+  </ul>
 </section>
 
+<section class="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <strong>Affirmation Application</strong> <span class="badge">September 2025</span><br>
+      A full-stack MERN application delivering daily positive affirmations. Users can browse, save, and share motivational quotes with personalized favorites.<br>
+      <a class="project-btn" href="https://affirmation-bay.vercel.app/" target="_blank">Browse my project here</a>
+    </li>
+    <li>
+      <strong>URL Shortener Application</strong> <span class="badge">August 2025</span><br>
+      A MERN stack application that creates short URLs, tracks clicks, and provides a responsive interface for managing links.<br>
+      <a class="project-btn" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Browse my project here</a><br>
+      <small>(Tip: If the short URL shows server error, please logout & login again)</small>
+    </li>
+  </ul>
+</section>
+
+<section class="achievements">
+  <h2>Leadership & Achievements</h2>
+  <ul>
+    <li><strong>Vice Chair Person</strong> (IEEE SDIT Student Branch) — May 2025<br>
+    Coordinate and lead technical workshops to enhance student skills, fostering Hands on learning and encouraging and innovation. Actively engaged in collaborative activities to bridge gap between academic concepts and real-world applications in SDIT.</li>
+    <li><strong>Postman API Fundamentals Student Expert</strong> — Dec 2023<br>
+    A certified Postman API Fundamentals Student Expert, demonstrating practical knowledge of RESTful API design, testing and collaboration workflows.</li>
+    <li><strong>Grand Marshal IT Manager Finalist</strong> — Apr 2025<br>
+    A <b>finalist</b> in the Grand Marshal IT Manager event at YENEPOYA Institute, recognized for excellence in technical problem-solving, aptitude, product management, stress interview rounds and team work.</li>
+    <li><strong>Mind Matrix Technical Competition Winner</strong> — May 2025<br>
+    Winner of Mind Matrix Sankalp Intra-College Technical Competition at Shree Devi Institute of Technology, showcasing technical skills and teamwork.</li>
+    <li><strong>Most Valuable Person</strong>, Soft Skill Trainers — Aug 2025<br>
+    Recognized as the <b>MVP</b> in Computer Science by soft skill trainers for excellence in teamwork, leadership and public speaking.</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Get In Touch</h2>
+  <ul>
+    <li><strong>Email:</strong> <a class="contact-link" href="mailto:Sinchanaps03@gmail.com">Sinchanaps03@gmail.com</a></li>
+    <li><strong>Phone:</strong> <a class="contact-link" href="tel:+917483081046">(+91) 7483081046</a></li>
+    <li><strong>LinkedIn:</strong> <a class="contact-link" href="https://linkedin.com/in/sinchana-p-s-41a78a261" target="_blank">linkedin.com/in/sinchana-p-s-41a78a261</a></li>
+    <li><strong>GitHub:</strong> <a class="contact-link" href="https://github.com/Sinchanaps03" target="_blank">github.com/Sinchanaps03</a></li>
+    <li><strong>Location:</strong> Mangalore, Karnataka</li>
+  </ul>
+  <h2>Let's Collaborate</h2>
+  <p>Open to internships and collaborations in MERN stack, web and AI projects, while always eager to discuss technology, share knowledge and learn from others.</p>
+</section>
 </body>
 </html>
