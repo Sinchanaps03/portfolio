@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinchana P S - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      /* Accent shapes and refined animations for a professional feel */
+      :root{
+        --accent: #7b2cbf;
+        --muted: #9ca3af;
+      }
+      html,body{height:100%;}
+      .accent-glow{
+        box-shadow: 0 8px 30px rgba(123,44,191,0.14);
+      }
+      .nav-backdrop{backdrop-filter: blur(6px);}
+      @keyframes floatY { 0% { transform: translateY(0); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0); } }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(8px);} to {opacity:1; transform:translateY(0);} }
+      @keyframes slideIn { from { opacity: 0; transform: translateX(20px);} to {opacity:1; transform:translateX(0);} }
+      .ani-fade { animation: fadeIn 700ms ease both; }
+      .ani-slide { animation: slideIn 700ms ease both; }
+      .ani-float { animation: floatY 4s ease-in-out infinite; }
+      .glass { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.04); }
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-black via-gray-900 to-gray-950 text-gray-100 font-sans antialiased">
+
+    <!-- top accent shapes -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-br from-[rgba(123,44,191,0.14)] to-transparent blur-3xl opacity-60 ani-float"></div>
+      <div class="absolute -bottom-44 -right-44 w-96 h-96 rounded-full bg-gradient-to-tr from-[rgba(45,212,191,0.06)] to-transparent blur-3xl opacity-50 ani-float" style="animation-delay: 200ms"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-4 z-40 mx-auto max-w-6xl px-6 py-2 rounded-xl nav-backdrop glass backdrop-blur-md flex items-center justify-between shadow-md">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[rgba(123,44,191,0.9)] to-[rgba(199,125,255,0.8)] flex items-center justify-center text-white font-semibold">SP</div>
+        <div>
+          <div class="text-sm font-semibold">Sinchana P S</div>
+          <div class="text-xs text-[var(--muted)]">MERN · Web · AI</div>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#skills" class="hover:text-white transition">Skills</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </div>
+      <div class="md:hidden text-gray-300"><button id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button></div>
+    </nav>
+
+    <main class="mx-auto max-w-6xl px-6 py-12">
+      <!-- HERO -->
+      <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mt-8">
+        <div class="md:col-span-2 space-y-6 ani-fade">
+          <h1 class="text-4xl md:text-5xl font-serif font-bold leading-tight">Sinchana P S</h1>
+          <p class="text-lg text-gray-300 max-w-2xl">Computer Science Engineering student and MERN stack developer building reliable web applications and exploring AI-driven interfaces. I focus on clean architecture, readable code, and production-ready deployments.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://github.com/Sinchanaps03" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 bg-[var(--accent)] text-white rounded-full shadow-md hover:scale-105 transition"> <i class="fab fa-github"></i> View GitHub</a>
+            <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 bg-transparent border border-gray-700 text-gray-200 rounded-full hover:bg-gray-800 transition">View Projects</a>
+          </div>
+          <div class="mt-6 flex gap-4 text-sm text-gray-400">
+            <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-gray-400"></i> Mangalore, Karnataka</div>
+            <div class="flex items-center gap-2"><i class="fas fa-envelope text-gray-400"></i> <a class="text-gray-300 hover:underline" href="mailto:Sinchanaps03@gmail.com">Sinchanaps03@gmail.com</a></div>
+          </div>
+        </div>
+
+        <aside class="md:col-span-1 ani-slide">
+          <div class="glass p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
+            <img src="public/Profile.png" alt="profile" class="w-28 h-28 rounded-full object-cover ring-2 ring-[rgba(123,44,191,0.18)] mb-4">
+            <div class="text-lg font-semibold">Sinchana P S</div>
+            <div class="text-sm text-gray-400">MERN Stack Developer</div>
+            <!-- experience bar removed as requested -->
+            <div class="mt-5 flex gap-3">
+              <a href="https://linkedin.com/in/sinchana-p-s-41a78a261" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+              <a href="https://github.com/Sinchanaps03" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="mt-12 ani-fade">
+        <h2 class="font-serif text-2xl mb-4">Technical Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="glass p-5 rounded-xl shadow-sm">
+            <h3 class="text-sm text-gray-400 mb-3">Frontend</h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>React</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:85%"></div></div>
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>Tailwind</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:80%"></div></div>
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>TypeScript</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:75%"></div></div>
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>JavaScript</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:78%"></div></div>
+            </div>
+          </div>
+          <div class="glass p-5 rounded-xl shadow-sm">
+            <h3 class="text-sm text-gray-400 mb-3">Backend & DB</h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>Node.js</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:82%"></div></div>
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>Express.js</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:80%"></div></div>
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>MongoDB / MySQL</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:78%"></div></div>
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>Python</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:80%"></div></div>
+            </div>
+          </div>
+          <div class="glass p-5 rounded-xl shadow-sm">
+            <h3 class="text-sm text-gray-400 mb-3">DevOps & Tools</h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>Docker</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:70%"></div></div>
+              <div class="flex items-center justify-between text-xs text-gray-300"><span>REST APIs</span></div>
+              <div class="h-3 bg-gray-800 rounded-full"><div class="h-full bg-gradient-to-r from-[var(--accent)] to-purple-400 rounded-full transition-all duration-500" style="width:88%"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="mt-12 ani-slide">
+        <h2 class="font-serif text-2xl mb-4">Selected Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/Echosketch.png" alt="Echosketch" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Echosketch — Voice to Visual</h4>
+            <p class="text-sm text-gray-400 mt-2">Multimodal AI system that converts voice commands into dynamic sketches and concepts.</p>
+            <div class="mt-4 flex gap-2">
+              <a class="text-sm px-3 py-2 bg-[var(--accent)] rounded-full text-white" href="https://echosketch-voice-to-vsuals.vercel.app" target="_blank">Live</a>
+              <a class="text-sm px-3 py-2 border border-gray-700 rounded-full text-gray-200" href="#">Details</a>
+            </div>
+          </article>
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/Affirmation.png" alt="Affirmation App" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Affirmation Application</h4>
+            <p class="text-sm text-gray-400 mt-2">Full-stack MERN app delivering daily positive affirmations with favorites and sharing.</p>
+            <div class="mt-4 flex gap-2">
+              <a class="text-sm px-3 py-2 bg-[var(--accent)] rounded-full text-white" href="https://affirmation-bay.vercel.app/" target="_blank">Live</a>
+              <a class="text-sm px-3 py-2 border border-gray-700 rounded-full text-gray-200" href="#">Repo</a>
+            </div>
+          </article>
+          <article class="glass p-4 rounded-xl hover:scale-105 transition shadow-sm">
+            <img src="public/URL_Shortener.png" alt="URL Shortener" class="w-full h-36 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">URL Shortener</h4>
+            <p class="text-sm text-gray-400 mt-2">MERN application creating short URLs, tracking clicks and providing a responsive interface for managing links.</p>
+            <div class="mt-4 flex gap-2">
+              <a class="text-sm px-3 py-2 bg-[var(--accent)] rounded-full text-white" href="https://short-url-frontend-i7cb.vercel.app/" target="_blank">Live</a>
+              <a class="text-sm px-3 py-2 border border-gray-700 rounded-full text-gray-200" href="#">Repo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Education & Achievements -->
+      <section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 ani-fade">
+        <div class="glass p-6 rounded-xl">
+          <h3 class="font-semibold mb-3">Education</h3>
+          <ul class="text-sm text-gray-300 space-y-3">
+            <li><strong class="text-white">Computer Science Engineering</strong><br>SDIT, Mangalore - B.E, 2026 — CGPA: 8.81 (Till 6th sem)</li>
+            <li><strong class="text-white">Pre-University Course (PU)</strong><br>St. Michael's College, Madikeri - 2022 — 87%</li>
+            <li><strong class="text-white">Matriculation</strong><br>S.R.R School, Kodagu - 2020 — 91.04%</li>
+          </ul>
+        </div>
+        <div class="glass p-6 rounded-xl">
+          <h3 class="font-semibold mb-3">Leadership & Achievements</h3>
+          <ul class="text-sm text-gray-300 space-y-3">
+            <li><strong class="text-white">Student Placement Coordinator</strong> — SDIT Placement Cell</li>
+            <li><strong class="text-white">Vice Chair Person</strong> — IEEE SDIT Student Branch</li>
+            <li><strong class="text-white">Postman API Fundamentals Student Expert</strong> — Dec 2023</li>
+            <li><strong class="text-white">Secured Runner-Up</strong> – IT Manager at a National-Level Competition hosted by Yenepoya College</li>
+            <li><strong class="text-white">Core Member</strong> – Served as a Core Member of SDIT Hackathon (Nexathon)</li>
+            <li><strong class="text-white">Organizer & Leader</strong> – Organized and Led a State-Level Event, Strategic IT Vision (IT Manager) at SDIT, Mangalore</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="mt-12 ani-slide">
+        <div class="glass p-6 rounded-xl">
+          <h3 class="font-semibold mb-4">Get in touch</h3>
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <div class="text-sm text-gray-300"><i class="fas fa-envelope mr-2 text-gray-400"></i> <a class="hover:underline" href="mailto:Sinchanaps03@gmail.com">Sinchanaps03@gmail.com</a></div>
+              <div class="text-sm text-gray-300 mt-2"><i class="fas fa-phone mr-2 text-gray-400"></i> (+91) 7483081046</div>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://linkedin.com/in/sinchana-p-s-41a78a261" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+              <a href="https://github.com/Sinchanaps03" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-12 text-center text-sm text-gray-500">© <span id="year"></span> Sinchana P S — Built with Tailwind</footer>
+    </main>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Mobile nav toggle (very small): toggles anchor visibility
+      const toggle = document.getElementById('navToggle');
+      if(toggle){
+        toggle.addEventListener('click', ()=>{
+          const nav = document.querySelector('nav div:nth-child(2)');
+          if(nav) nav.classList.toggle('hidden');
+        });
+      }
+    </script>
+  </body>
+</html>
+
